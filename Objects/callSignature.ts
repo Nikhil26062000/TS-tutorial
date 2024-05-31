@@ -5,6 +5,8 @@ type Student = {
     age : number;
     gender : string;
     greet: (country: string) =>string  //A call signature in TypeScript describes the parameters and return type of a function or method. In this case, (country: string) => string describes a function that takes a single parameter country of type string and returns a string.
+    
+    //(country: string) => string //! another way to define call signature. not used much in industry bcz it is less readable
 }
 
 const student1 : Student = {
@@ -23,3 +25,6 @@ const student2 : Student = {
 
 console.log(student1.greet("India"));
 console.log(student2.greet("India"));
+
+//! console.log(student1("India")); another way to  call function which we define above as call signature. 
+
