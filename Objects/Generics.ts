@@ -33,8 +33,12 @@ console.log(RandomFunction(true));
 
 function add<T, U>(a: T, b: U, c: boolean): void {
   // here i am using Generics and non-generics (c:boolean) also
+  console.log("----------------------------");
+  
   console.log(typeof a);
   console.log(typeof b);
+  console.log(typeof c);
+  
 }
 
 const result1 = add<number, string>(5, "hello", true); // here i am writing <number,string> but i i dont write then also it is fine
@@ -46,10 +50,15 @@ const result2 = add("world", true, false); // here i don't write then also it is
 
 // This is a TypeScript function called add that takes two generic types T and U for its first two arguments (a and b) and a boolean for its third argument (c).
 function add<T, U>(a: T, b: U, c: boolean): void {
-    // Logs the type of the first argument 'a' to the console.
-    console.log(typeof a);
-    // Logs the type of the second argument 'b' to the console.
-    console.log(typeof b);
+  // Logs a separator line to the console for clarity.
+  console.log("----------------------------");
+  
+  // Logs the type of the first argument 'a' to the console.
+  console.log(typeof a);
+  // Logs the type of the second argument 'b' to the console.
+  console.log(typeof b);
+  // Logs the type of the third argument 'c' to the console.
+  console.log(typeof c);
 }
 
 // Calls the add function with number and string as generic types for the first two arguments, and true as the boolean third argument.
