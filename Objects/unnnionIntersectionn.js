@@ -1,4 +1,15 @@
 // Union
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 //?  ------------------------------------------------------------------------------ >
 //?      🔥 Question : If the input value is number then return its double
 //?      😱 if it is string return it in uppercase
@@ -27,13 +38,15 @@ var officeEmployee = {
 };
 var User1 = {
     name: "Nikhil raj",
-    age: 28
+    age: 28,
 };
 var MyLocation = {
     city: "XYX",
-    country: "India"
+    country: "India",
 };
 var MyInroduction = function (User1, MyLocation) {
-    return "Hello My Name is ".concat(User1.name, " and I am ").concat(User1.age, " and I live in ").concat(MyLocation.city, " which is in ").concat(MyLocation.country);
+    //   return `Hello My Name is ${User1.name} and I am ${User1.age} and I live in ${MyLocation.city} which is in ${MyLocation.country}`;
+    return __assign(__assign({}, User1), MyLocation); // by this way we r returning data from both type MyUser & MyLocation
 };
-console.log(MyInroduction(User1, MyLocation));
+var TotalInformations = MyInroduction(User1, MyLocation); // here we are ensuring that the data which is coming is from both type MyUser & MyLocation i:e Intersectio
+console.log(TotalInformations);

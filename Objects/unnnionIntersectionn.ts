@@ -86,8 +86,11 @@ const MyLocation: MyLocation = {
   country: "India",
 };
 
-const MyInroduction = (User1: MyUser, MyLocation: MyLocation): string => {
-  return `Hello My Name is ${User1.name} and I am ${User1.age} and I live in ${MyLocation.city} which is in ${MyLocation.country}`;
+const MyInroduction = (User1: MyUser, MyLocation: MyLocation) => {
+//   return `Hello My Name is ${User1.name} and I am ${User1.age} and I live in ${MyLocation.city} which is in ${MyLocation.country}`;
+return {...User1,...MyLocation}  // by this way we r returning data from both type MyUser & MyLocation
 };
 
-console.log(MyInroduction(User1, MyLocation));
+const TotalInformations : MyUser & MyLocation = MyInroduction(User1,MyLocation)  // here we are ensuring that the data which is coming is from both type MyUser & MyLocation i:e Intersectio
+console.log(TotalInformations);
+
