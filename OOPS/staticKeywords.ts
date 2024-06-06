@@ -11,4 +11,6 @@ class MathOperations {
 
 console.log(MathOperations.add(2,5));
 console.log(MathOperations.subtract(5,2));
+console.log(MathOperations.PI);
+
 
